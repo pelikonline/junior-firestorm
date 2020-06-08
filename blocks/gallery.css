@@ -7,20 +7,8 @@
 
 .gallery__inner {
     position: relative;
-    width: 320px;
-    height: 216px;
     margin: 0;
     padding: 0;
-}
-
-.gallery__slides {
-    display: flex;
-    flex-direction: row;
-    width: 400%;
-}
-
-.gallery__inner picture {
-    float: left;
 }
 
 .gallery__image {
@@ -30,28 +18,13 @@
     line-height: 0;
 }
 
-
-/*
-.gallery__item-1 {
-
+.gallery__image img {
+    width: 100%;
 }
-
-.gallery__item-2 {
-
-}
-
-.gallery__item-3 {
-
-}
-
-.gallery__item-4 {
-
-}
-*/
 
 .gallery__button-left, .gallery__button-right {
     position: absolute;
-    top: 100px;
+    top: calc(50% - 15px);
     display: block;
     width: 26px;
     height: 30px;
@@ -63,56 +36,41 @@
 
 .gallery__button-left {
     left: 24px;
-    background: url("../img/left.svg") no-repeat;
+    background: url("../img/left-desc.svg") no-repeat;
 }
 
 .gallery__button-right {
     right: 24px;
-    background: url("../img/right.svg") no-repeat;
+    background: url("../img/right-desc.svg") no-repeat;
 }
 
 @media (min-width: 768px) {
-    .gallery__inner {
-        width: 640px;
-        height: 480px;
-    }
-
     .gallery__button-left, .gallery__button-right {
-        top: 200px;
+        top: calc(50% - 30px);
         width: 55px;
         height: 60px;
     }
 
     .gallery__button-left {
         left: 48px;
-        background: url("../img/left-tab.svg") no-repeat;
     }
 
     .gallery__button-right {
         right: 48px;
-        background: url("../img/right-tab.svg") no-repeat;
     }
 }
 
 @media (min-width: 1280px) {
-    .gallery__inner {
-        width: 728px;
-        height: 480px;
-    }
-
     .gallery__button-left, .gallery__button-right {
-        top: 220px;
         width: 60px;
         height: 65px;
     }
 
     .gallery__button-left {
         left: 120px;
-        background: url("../img/left-desc.svg") no-repeat;
     }
 
     .gallery__button-right {
         right: 120px;
-        background: url("../img/right-desc.svg") no-repeat;
     }
 }

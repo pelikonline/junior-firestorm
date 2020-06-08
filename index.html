@@ -5,7 +5,8 @@
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="slick.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Покер для новичков. Учим побеждать, спонсируем игроков. Базовый курс бесплатно</title>
   <body>
     <header class="page-header">
@@ -118,31 +119,31 @@
         </div>
         <div class="gallery">
           <div class="gallery__inner">
-            <div class="gallery__slides">
+            <div class="js-gallery-about">
               <picture class="gallery__image">
                 <source media="(min-width: 1280px)" srcset="img/team-desc.jpg">
                 <source media="(min-width: 768px)" srcset="img/team-tab-m.jpg">
                 <img src="img/team.jpg" alt="Команда Firestorm">
               </picture>
-              <picture class="gallery__image gallery__item-2">
+              <picture class="gallery__image">
                 <source media="(min-width: 1280px)" srcset="img/team-desc.jpg">
                 <source media="(min-width: 768px)" srcset="img/team-tab-m.jpg">
                 <img src="img/team.jpg" alt="И ещё команда Firestorm">
               </picture>
-              <picture class="gallery__image gallery__item-3">
+              <picture class="gallery__image">
                 <source media="(min-width: 1280px)" srcset="img/team-desc.jpg">
                 <source media="(min-width: 768px)" srcset="img/team-tab-m.jpg">
                 <img src="img/team.jpg" alt="Тут вот такая команда Firestorm">
               </picture>
-              <picture class="gallery__image gallery__item-4">
+              <picture class="gallery__image">
                 <source media="(min-width: 1280px)" srcset="img/team-desc.jpg">
                 <source media="(min-width: 768px)" srcset="img/team-tab-m.jpg">
                 <img src="img/team.jpg" alt="Четвёртая фотка команды Firestorm">
               </picture>
             </div>
           </div>
-          <span class="gallery__button-left" id="prev"></span>
-          <span class="gallery__button-right" id="next"></span>
+          <span class="gallery__button-left js-gallery-about-prev" id="prev"></span>
+          <span class="gallery__button-right js-gallery-about-next" id="next"></span>
         </div>
       </section>
       <section class="profit">
@@ -291,7 +292,7 @@
           <a class="page-footer__order" href="#">получить доступ × бесплатно</a>
         </div>
         <div class="page-footer__wrap-end">
-          <a class="page-footer__restart" href="#">в начало</a>
+          <a class="page-footer__restart js-button-up" href="#">в начало</a>
           <p class="page-footer__copyright">2020 © firestorm
             <span>– учим побеждать!</span></p>
           <a class="page-footer__privacy" href="#">политика конфиденциальности</a>
@@ -320,5 +321,8 @@
         </div>
       </section>
     </footer>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

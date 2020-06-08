@@ -1,0 +1,15 @@
+@import "global.css";
+@import "normalize.css";
+@import "blocks/page-header.css";
+@import "blocks/page-main.css";
+@import "blocks/intro.css";
+@import "blocks/guarantee.css";
+@import "blocks/slider.css";
+@import "blocks/about.css";
+@import "blocks/gallery.css";
+@import "blocks/profit.css";
+@import "blocks/program.css";
+@import "blocks/slider-program.css";
+@import "blocks/requirements.css";
+@import "blocks/page-footer.css";
+@import "blocks/modal.css";

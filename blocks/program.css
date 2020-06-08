@@ -1,0 +1,284 @@
+.program {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.program__wrap {
+    width: 320px;
+    margin: 0 auto;
+    padding: 70px 0 90px 0;
+}
+
+.program__wrap-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 0;
+    padding: 0;
+}
+
+.program__title {
+    margin: 0;
+    padding: 0 0 35px 16px;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: #101010;
+}
+
+.program__item {
+    position: relative;
+    margin: 0;
+    padding: 40px 0 40px 0;
+    width: 288px;
+    height: 220px;
+    background-color: transparent;
+    z-index: 10;
+}
+
+.program__item--base {
+    display: block;
+}
+
+.program__item--base::before {
+    display: none;
+
+    content: '';
+    position: absolute;
+    width: 39px;
+    height: 40px;
+    background-image: url("../img/01.svg");
+    background-repeat: no-repeat;
+    top: -20px;
+    left: 0;
+    z-index: 10;
+}
+
+.program__item--exam {
+    display: block;
+}
+
+.program__item--exam::before {
+    display: none;
+
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 40px;
+    background-image: url("../img/02.svg");
+    background-repeat: no-repeat;
+    top: 0;
+    right: 20px;
+    z-index: 10;
+}
+
+.program__item--contract {
+    display: block;
+}
+
+.program__item--contract::before {
+    display: none;
+
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 40px;
+    background-image: url("../img/03.svg");
+    background-repeat: no-repeat;
+    top: 0;
+    right: 20px;
+    z-index: 10;
+}
+
+.program__item-title {
+    width: 260px;
+    margin: 0;
+    padding: 0 0 10px 0;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #101010;
+}
+
+.program__item-description {
+    width: 260px;
+    margin: 0;
+    padding: 0 0 10px 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    white-space: pre-line;
+    color: #101010;
+}
+
+.program__item-text {
+    width: 260px;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    white-space: pre-line;
+    color: #101010;
+}
+
+@media (min-width: 768px) {
+    .program__wrap {
+        width: 768px;
+        padding: 70px 0 70px 0;
+    }
+
+    .program__wrap-top {
+        flex-direction: column;
+    }
+
+    .program__title {
+        width: 650px;
+        padding: 0 0 50px 48px;
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    .program__item {
+        width: 280px;
+        margin: 0 80px 0 0;
+        padding: 60px 0 20px 0;
+    }
+
+    .program__item--base::before {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 39px;
+        height: 40px;
+        background-image: url("../img/01.svg");
+        background-repeat: no-repeat;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+    .program__item--exam::before {
+        display: block;
+        top: 0;
+        left: 0;
+    }
+
+    .program__item--contract::before {
+        display: block;
+        top: 0;
+        left: 0;
+    }
+
+    .program__item-title {
+        width: 280px;
+    }
+
+    .program__item-description {
+        width: 280px;
+        white-space: normal;
+    }
+
+    .program__item-text {
+        width: 280px;
+        white-space: normal;
+    }
+}
+
+@media (min-width: 1024px) {
+    .program__wrap {
+        width: 860px;
+    }
+
+    .program__title {
+        padding: 0 0 50px 0;
+    }
+
+    .program__item {
+        width: 360px;
+        margin: 0 80px 0 0;
+        padding: 60px 0 0 0;
+    }
+
+    .program__item-title {
+        width: 300px;
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .program__item-description {
+        width: 350px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .program__item-text {
+        width: 350px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+
+
+@media (min-width: 1280px) {
+    .program__wrap {
+        width: 1200px;
+        padding: 100px 0 100px 0;
+    }
+
+    .program__title {
+        width: 750px;
+        padding: 0 0 80px 0;
+        font-size: 48px;
+        line-height: 90px;
+    }
+
+    .program__item {
+        width: 400px;
+        height: 330px;
+        margin: 0 90px 0 0;
+        padding: 0 0 0 110px;
+    }
+
+
+    .program__item--base::before {
+        top: 8px;
+        right: 440px;
+    }
+
+    .program__item--exam::before {
+        top: 8px;
+        right: 440px;
+    }
+
+    .program__item--contract::before {
+        top: 8px;
+        right: 440px;
+    }
+
+    .program__item-title {
+        width: 400px;
+        padding: 0 0 40px 0;
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .program__item-description {
+        width: 400px;
+        padding: 0 0 30px 0;
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    .program__item-text {
+        width: 400px;
+        font-size: 18px;
+        line-height: 32px;
+    }
+}

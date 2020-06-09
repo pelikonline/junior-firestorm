@@ -4,10 +4,6 @@
     padding: 0 0 0 32px;
 }
 
-.slider input[type="radio"] {
-    display: none;
-}
-
 .slider-inner {
     position: relative;
 }

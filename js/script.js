@@ -12,6 +12,13 @@ $(document).ready(function () {
     nextArrow: ".js-gallery-about-next",
   });
 
+  configureGalleryProgram({
+    container: ".js-gallery-program",
+    prevArrow: ".js-gallery-program-prev",
+    nextArrow: ".js-gallery-program-next",
+    containerDots: ".js-gallery-program-dots",
+  });
+
   configureScrollTop({
     container: "body,html",
     targetElement: ".js-button-up",
@@ -51,6 +58,30 @@ function configureGalleryAbout(config) {
     nextArrow: $(config.nextArrow),
     slidesToShow: 2,
     slidesToScroll: 2,
+  });
+}
+
+function configureGalleryProgram(config) {
+  $(config.container).slick({
+    adaptiveHeight: true,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 300,
+    prevArrow: $(config.prevArrow),
+    nextArrow: $(config.nextArrow),
+    appendDots: $(config.containerDots),
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   });
 }
 

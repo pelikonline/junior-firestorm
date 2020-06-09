@@ -155,22 +155,9 @@
           <div class="program__wrap-top">
             <h2 class="program__title">Программа обучения</h2>
             <div class="slider-program">
-              <input type="radio" id="btn-01" name="toggle-program" checked>
-              <input type="radio" id="btn-02" name="toggle-program">
-              <input type="radio" id="btn-03" name="toggle-program">
-              <div class="slider-program__controls">
-                <label for="btn-01">
-                    <span class="visually-hidden">Первый слайд</span>
-                </label>
-                <label for="btn-02">
-                    <span class="visually-hidden">Второй слайд</span>
-                </label>
-                <label for="btn-03">
-                    <span class="visually-hidden">Третий слайд</span>
-                </label>
-              </div>
+              <div class="slider-controls js-gallery-program-dots"></div>
               <div class="slider-program__inner">
-                <div class="slider-program__slides">
+                <div class="slider-program__slides js-gallery-program">
                   <div class="program__item program__item--base">
                     <p class="program__item-title">Базовый курс</p>
                     <p class="program__item-description">изучение теории и тестирование
@@ -200,6 +187,8 @@
                     </p>
                   </div>
                 </div>
+                <div class="js-gallery-program-prev" style="position: absolute; top: 50%; left: 0; color: black;"> < </div>
+                <div class="js-gallery-program-next" style="position: absolute; top: 50%; right: 0; color: black;"> > </div>
               </div>
             </div>
           </div>

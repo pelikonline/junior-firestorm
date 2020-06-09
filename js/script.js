@@ -1,4 +1,11 @@
 $(document).ready(function () {
+  configureGalleryGuarantee({
+    container: ".js-gallery-guarantee",
+    prevArrow: ".js-gallery-guarantee-prev",
+    nextArrow: ".js-gallery-guarantee-next",
+    containerDots: ".js-gallery-guarantee-dots",
+  });
+
   configureGalleryAbout({
     container: ".js-gallery-about",
     prevArrow: ".js-gallery-about-prev",
@@ -11,6 +18,29 @@ $(document).ready(function () {
     duration: 500,
   });
 });
+
+function configureGalleryGuarantee(config) {
+  $(config.container).slick({
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 300,
+    prevArrow: $(config.prevArrow),
+    nextArrow: $(config.nextArrow),
+    appendDots: $(config.containerDots),
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+}
 
 function configureGalleryAbout(config) {
   $(config.container).slick({

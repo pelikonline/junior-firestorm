@@ -34,14 +34,7 @@
     position: relative;
     margin: 0;
     padding: 40px 0 0 0;
-    width: 288px;
-    height: 150px;
     background-color: transparent;
-    z-index: 10;
-}
-
-.guarantee__item--idea {
-    display: block;
 }
 
 .guarantee__item--idea::before {
@@ -51,13 +44,9 @@
     height: 188px;
     background-image: url("../img/idea.svg");
     background-repeat: no-repeat;
-    top: 12px;
+    top: 0;
     right: 0;
     z-index: -10;
-}
-
-.guarantee__item--protect {
-    display: block;
 }
 
 .guarantee__item--protect::before {
@@ -67,13 +56,9 @@
     height: 150px;
     background-image: url("../img/protect.svg");
     background-repeat: no-repeat;
-    top: 30px;
+    top: 0;
     right: 0;
     z-index: -10;
-}
-
-.guarantee__item--support {
-    display: block;
 }
 
 .guarantee__item--support::before {
@@ -83,13 +68,9 @@
     height: 186px;
     background-image: url("../img/support.svg");
     background-repeat: no-repeat;
-    top: 10px;
+    top: 0;
     right: 0;
     z-index: -10;
-}
-
-.guarantee__item--money {
-    display: block;
 }
 
 .guarantee__item--money::before {
@@ -99,13 +80,9 @@
     height: 160px;
     background-image: url("../img/money.svg");
     background-repeat: no-repeat;
-    top: 30px;
+    top: 0;
     right: 0;
     z-index: -10;
-}
-
-.guarantee__item--friends {
-    display: block;
 }
 
 .guarantee__item--friends::before {
@@ -115,7 +92,7 @@
     height: 205px;
     background-image: url("../img/friends.svg");
     background-repeat: no-repeat;
-    top: 4px;
+    top: 0;
     right: 0;
     z-index: -10;
 }
@@ -152,32 +129,26 @@
     }
 
     .guarantee__item {
-        width: 288px;
         margin: 0 80px 0 0;
     }
 
     .guarantee__item--idea::before {
-        top: 0;
         right: -40px;
     }
 
     .guarantee__item--protect::before {
-        top: 30px;
         right: -15px;
     }
 
     .guarantee__item--support::before {
-        top: 10px;
         right: -40px;
     }
 
     .guarantee__item--money::before {
-        top: 25px;
         right: -20px;
     }
 
     .guarantee__item--friends::before {
-        top: -10px;
         right: -20px;
     }
 
@@ -200,12 +171,6 @@
         padding: 0 0 50px 0;
     }
 
-    .guarantee__item {
-        width: 360px;
-        min-height: 200px;
-        margin: 0 80px 0 0;
-    }
-
     .guarantee__item-description {
         width: 360px;
         font-size: 16px;
@@ -226,33 +191,26 @@
     }
 
     .guarantee__item {
-        width: 472px;
-        height: 200px;
         margin: 0 140px 0 0;
     }
 
     .guarantee__item--idea::before {
-        top: -10px;
         right: -20px;
     }
 
     .guarantee__item--protect::before {
-        top: -10px;
         right: -20px;
     }
 
     .guarantee__item--support::before {
-        top: -12px;
         right: -50px;
     }
 
     .guarantee__item--money::before {
-        top: -10px;
         right: -20px;
     }
 
     .guarantee__item--friends::before {
-        top: -10px;
         right: -20px;
     }
 

@@ -1,4 +1,9 @@
 $(document).ready(function () {
+  toggleModal({
+    modalElement: ".js-modal",
+    buttonElement: ".js-toggle-modal",
+  });
+
   configureGalleryGuarantee({
     container: ".js-gallery-guarantee",
     prevArrow: ".js-gallery-guarantee-prev",
@@ -31,6 +36,14 @@ $(document).ready(function () {
     duration: 500,
   });
 });
+
+function toggleModal(config) {
+  $(config.buttonElement).click(function (e) {
+    e.preventDefault();
+
+    $(config.modalElement).fadeToggle();
+  });
+}
 
 function configureGalleryGuarantee(config) {
   $(config.container).slick({

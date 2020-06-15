@@ -2,11 +2,25 @@
     position: relative;
     margin: -70px 0 0 0;
     padding: 70px 0 0 0;
-    background-image: url("../img/head-desc.jpg");
+    background-image: url("../img/bg-intro.jpg");
     background-repeat: no-repeat;
-    background-size: 2340px 704px;
+    background-size: 840px 640px;
     background-position: center;
     background-color: #080808;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.intro::before {
+    position: absolute;
+    content: "";
+    width: 444px;
+    height: 358px;
+    background-image: url("../img/chip-mob.png");
+    background-repeat: no-repeat;
+    top: 335px;
+    right: 0;
+    z-index: -1;
 }
 
 .intro__wrap {
@@ -38,7 +52,7 @@
 }
 
 .intro__description {
-    padding: 0 0 130px 32px;
+    padding: 0 0 200px 32px;
     font-style: italic;
     font-weight: 600;
     font-size: 12px;
@@ -87,15 +101,19 @@
 
 @media (min-width: 768px) {
     .intro {
-        position: relative;
         margin: -100px 0 0 0;
         padding: 70px 0 0 0;
-        /*
-        background-image: url("../img/bg-head.png");
+    }
+
+    .intro::before {
+        position: absolute;
+        content: "";
+        width: 658px;
+        height: 530px;
+        background-image: url("../img/chip-tab.png");
         background-repeat: no-repeat;
-        background-size: 1498px 776px;
-        background-position: center;
-         */
+        top: 85px;
+        right: -240px;
     }
 
     .intro__wrap {
@@ -137,6 +155,11 @@
 }
 
 @media (min-width: 1024px) {
+    .intro::before {
+        top: 85px;
+        right: -110px;
+    }
+
     .intro__wrap {
         width: 860px;
         padding: 0 0 70px 0;
@@ -166,31 +189,33 @@
 
 @media (min-width: 1280px) {
     .intro {
+        position: relative;
         margin: -260px 0 0 0;
-        /*
-        background-image: url("../img/bg-head.png");
+        padding: 120px 0 0 0;
+        background-image: url("../img/bg-intro-desc.jpg");
         background-repeat: no-repeat;
-        background-size: 1498px 776px;
+        background-size: 2260px 672px;
         background-position: center;
-         */
+        background-color: #080808;
+        overflow: hidden;
+    }
+
+    .intro::before {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 720px;
+        height: 580px;
+        background-image: url("../img/chip_desc.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 240px;
+        right: 100px;
     }
 
     .intro__wrap {
-        position: relative;
         width: 1200px;
-        padding: 60px 0 150px 0;
-    }
-
-    .intro__wrap::before {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 638px;
-        background-image: url("../img/fire_chip.png");
-        background-repeat: no-repeat;
-        top: 125px;
-        right: -600px;
-        z-index: 10;
+        padding: 0 0 80px 0;
     }
 
     .intro__wrap-top {

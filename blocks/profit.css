@@ -106,8 +106,8 @@
 @media (min-width: 768px) {
     .profit__wrap {
         width: 768px;
-        padding: 110px 0 70px 0;
-        background-position: 310px 0;
+        padding: 60px 0 20px 0;
+        background-position: 335px 0;
     }
 
     .profit__title {
@@ -122,17 +122,17 @@
 
     .profit__item--1::before {
         top: 10px;
-        left: 501px;
+        left: 521px;
     }
 
     .profit__item--2::before {
         top: 13px;
-        left: 485px;
+        left: 515px;
     }
 
     .profit__item--3::before {
         top: 17px;
-        left: 401px;
+        left: 414px;
     }
 
     .profit__item-head {
@@ -181,17 +181,17 @@
 
     .profit__item--1::before {
         top: 10px;
-        left: 596px;
+        left: 588px;
     }
 
     .profit__item--2::before {
         top: 13px;
-        left: 598px;
+        left: 600px;
     }
 
     .profit__item--3::before {
         top: 17px;
-        left: 547px;
+        left: 541px;
     }
 
     .profit__item-head {
@@ -244,12 +244,12 @@
 
     .profit__item--2::before {
         top: 13px;
-        left: 796px;
+        left: 782px;
     }
 
     .profit__item--3::before {
         top: 17px;
-        left: 701px;
+        left: 637px;
     }
 
     .profit__item-head {

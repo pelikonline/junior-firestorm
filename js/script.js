@@ -19,9 +19,15 @@ $(document).ready(function () {
     containerDots: ".js-gallery-program-dots",
   });
 
-  configureScrollTop({
-    container: "body,html",
+  scrollToElement({
+    destinationElement: "body,html",
     targetElement: ".js-button-up",
+    duration: 500,
+  });
+
+  scrollToElement({
+    destinationElement: ".js-guarantee",
+    targetElement: ".js-button-arrow",
     duration: 500,
   });
 });
@@ -76,13 +82,13 @@ function configureGalleryProgram(config) {
   });
 }
 
-function configureScrollTop(config) {
+function scrollToElement(config) {
   $(config.targetElement).click(function (e) {
     e.preventDefault();
 
-    $(config.container).animate(
+    $("html, body").animate(
       {
-        scrollTop: 0,
+        scrollTop: $(config.destinationElement).offset().top,
       },
       config.duration
     );

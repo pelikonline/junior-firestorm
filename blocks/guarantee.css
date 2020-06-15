@@ -77,6 +77,25 @@
     color: #ffffff;
 }
 
+/*
+.guarantee__button-prev {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    color: white;
+}
+
+.guarantee__button-next {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    color: white;
+}
+
+ */
+
 @media (min-width: 768px) {
     .guarantee__wrap {
         width: 768px;

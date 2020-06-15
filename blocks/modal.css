@@ -7,12 +7,23 @@
     width: 100%;
     font-family: "Montserrat", Arial, sans-serif;
     background-color: #000000;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.modal__close {
+    background: url("../img/popup-exit.svg") no-repeat;
+    width: 18px;
+    height: 18px;
+    margin-left: auto;
+    margin-right: 16px;
+    cursor: pointer;
 }
 
 .modal__wrap {
     width: 320px;
     margin: 0 auto;
-    padding: 68px 0 120px 0;
+    padding-top: 28px;
 }
 
 .modal__title {

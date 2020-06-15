@@ -1,4 +1,9 @@
 $(document).ready(function () {
+  toggleModal({
+    modalElement: ".js-modal",
+    buttonElement: ".js-toggle-modal",
+  });
+
   configureGalleryGuarantee({
     container: ".js-gallery-guarantee",
     prevArrow: ".js-gallery-guarantee-prev",
@@ -19,22 +24,48 @@ $(document).ready(function () {
     containerDots: ".js-gallery-program-dots",
   });
 
-  configureScrollTop({
-    container: "body,html",
+  scrollToElement({
+    destinationElement: "body,html",
     targetElement: ".js-button-up",
+    duration: 500,
+  });
+
+  scrollToElement({
+    destinationElement: ".js-guarantee",
+    targetElement: ".js-button-arrow",
     duration: 500,
   });
 });
 
+function toggleModal(config) {
+  $(config.buttonElement).click(function (e) {
+    e.preventDefault();
+
+    $(config.modalElement).fadeToggle();
+  });
+}
+
 function configureGalleryGuarantee(config) {
   $(config.container).slick({
     dots: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     speed: 300,
     prevArrow: $(config.prevArrow),
     nextArrow: $(config.nextArrow),
     appendDots: $(config.containerDots),
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  });
+}
+
+function configureGalleryAbout(config) {
+  $(config.container).slick({
+    autoplay: false,
+    autoplaySpeed: 3000,
+    speed: 300,
+    prevArrow: $(config.prevArrow),
+    nextArrow: $(config.nextArrow),
     slidesToShow: 2,
     slidesToScroll: 2,
     responsive: [
@@ -46,18 +77,6 @@ function configureGalleryGuarantee(config) {
         },
       },
     ],
-  });
-}
-
-function configureGalleryAbout(config) {
-  $(config.container).slick({
-    autoplay: true,
-    autoplaySpeed: 3000,
-    speed: 300,
-    prevArrow: $(config.prevArrow),
-    nextArrow: $(config.nextArrow),
-    slidesToShow: 2,
-    slidesToScroll: 2,
   });
 }
 
@@ -65,33 +84,24 @@ function configureGalleryProgram(config) {
   $(config.container).slick({
     adaptiveHeight: true,
     dots: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     speed: 300,
     prevArrow: $(config.prevArrow),
     nextArrow: $(config.nextArrow),
     appendDots: $(config.containerDots),
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+    slidesToShow: 1,
+    slidesToScroll: 1,
   });
 }
 
-function configureScrollTop(config) {
+function scrollToElement(config) {
   $(config.targetElement).click(function (e) {
     e.preventDefault();
 
-    $(config.container).animate(
+    $("html, body").animate(
       {
-        scrollTop: 0,
+        scrollTop: $(config.destinationElement).offset().top,
       },
       config.duration
     );

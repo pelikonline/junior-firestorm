@@ -46,7 +46,6 @@
 
 .slider-arrows {
     display: none!important;
-    color: white;
     width: 35px;
     height: 35px;
     cursor: pointer;
@@ -56,12 +55,10 @@
 }
 
 .slider-arrows__left {
-    background: url("../img/left-desc.svg") no-repeat;
     right: 50px;
 }
 
 .slider-arrows__right {
-    background: url("../img/right-desc.svg") no-repeat;
     right: 0;
 }
 

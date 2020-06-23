@@ -106,7 +106,7 @@
 @media (min-width: 768px) {
     .profit__wrap {
         width: 768px;
-        padding: 60px 0 20px 0;
+        padding: 100px 0 30px 0;
         background-position: 335px 0;
     }
 
@@ -117,22 +117,22 @@
     }
 
     .profit__item {
-        padding: 0 0 50px 48px;
+        padding: 0 0 20px 68px;
     }
 
     .profit__item--1::before {
         top: 10px;
-        left: 521px;
+        left: 525px;
     }
 
     .profit__item--2::before {
         top: 13px;
-        left: 515px;
+        left: 513px;
     }
 
     .profit__item--3::before {
         top: 17px;
-        left: 414px;
+        left: 430px;
     }
 
     .profit__item-head {
@@ -165,6 +165,7 @@
 @media (min-width: 1024px) {
     .profit__wrap {
         width: 860px;
+        padding: 104px 0 2px 0;
         background-image: url("../img/ellipse-desc.png");
         background-position: -170px 0;
     }
@@ -176,22 +177,22 @@
     }
 
     .profit__item {
-        padding: 0 0 50px 0;
+        padding: 0 0 50px 20px;
     }
 
     .profit__item--1::before {
         top: 10px;
-        left: 588px;
+        left: 596px;
     }
 
     .profit__item--2::before {
         top: 13px;
-        left: 600px;
+        left: 594px;
     }
 
     .profit__item--3::before {
         top: 17px;
-        left: 541px;
+        left: 517px;
     }
 
     .profit__item-head {
@@ -223,18 +224,18 @@
 @media (min-width: 1280px) {
     .profit__wrap {
         width: 1200px;
-        padding: 150px 0 130px 0;
+        padding: 142px 0 30px 0;
         background-position: 45px 0;
     }
 
     .profit__title {
-        padding: 0 0 60px 0;
+        padding: 0 0 80px 0;
         font-size: 48px;
         line-height: 64px;
     }
 
     .profit__item {
-        padding: 0 0 60px 100px;
+        padding: 0 0 60px 136px;
     }
 
     .profit__item--1::before {
@@ -244,12 +245,12 @@
 
     .profit__item--2::before {
         top: 13px;
-        left: 782px;
+        left: 762px;
     }
 
     .profit__item--3::before {
         top: 17px;
-        left: 637px;
+        left: 589px;
     }
 
     .profit__item-head {

@@ -28,7 +28,7 @@
     position: absolute;
     content: "";
     top: 0;
-    left: 0;
+    left: -18px;
     width: 302px;
     height: 178px;
     background-image: url("../img/cube-mob.png");
@@ -39,12 +39,12 @@
 .page-footer__wrap {
     width: 320px;
     margin: 0 auto;
-    padding: 0 0 30px 0;
+    padding: 0 0 10px 0;
 }
 
 .page-footer__title {
     margin: 0;
-    padding: 90px 0 20px 16px;
+    padding: 90px 0 24px 32px;
     font-style: italic;
     font-weight: 900;
     font-size: 28px;
@@ -54,7 +54,7 @@
 }
 
 .page-footer__wrap-content {
-    margin: 0 0 60px 0;
+    margin: 0 0 70px 0;
     padding: 0;
 }
 
@@ -89,8 +89,8 @@
 }
 
 .page-footer__description {
-    margin: 0 0 40px 0;
-    padding: 0 0 0 16px;
+    margin: 0 0 50px 0;
+    padding: 0 0 0 32px;
     font-style: italic;
     font-size: 20px;
     font-weight: 400;
@@ -147,7 +147,7 @@
 .page-footer__restart {
     position: relative;
     width: 300px;
-    margin: 0 0 40px 0;
+    margin: 0 0 43px 0;
     padding: 30px 0 0 0;
     text-align: center;
     font-style: italic;
@@ -182,7 +182,7 @@
 
 .page-footer__copyright {
     width: 130px;
-    padding: 0 0 0 16px;
+    padding: 0 0 0 32px;
     font-style: italic;
     font-size: 12px;
     font-weight: 900;
@@ -212,7 +212,7 @@
 @media (min-width: 768px) {
     .page-footer {
         margin: -2px 0 0 0;
-        padding: 150px 0 0 0;
+        padding: 165px 0 0 0;
         background-image: url("../img/bg-foot-tab.jpg");
         background-repeat: no-repeat;
         background-position: top;
@@ -257,7 +257,7 @@
     .page-footer__wrap-content {
         display: flex;
         flex-direction: column;
-        margin: 0 0 110px 0;
+        margin: 0 0 100px 0;
     }
 
     .page-footer__description {
@@ -343,12 +343,12 @@
     }
 
     .page-footer:after {
-        left: 150px;
+        left: 120px;
     }
 
     .page-footer__wrap {
         width: 860px;
-        padding: 40px 82px 40px 82px;
+        padding: 10px 82px 10px 82px;
     }
 
     .page-footer__title {
@@ -357,7 +357,7 @@
     }
 
     .page-footer__wrap-content {
-        margin: 0 0 80px 0;
+        margin: 0 0 120px 0;
     }
 
     .page-footer__description {
@@ -411,7 +411,7 @@
         position: absolute;
         content: "";
         top: 0;
-        left: 150px;
+        left: 55px;
         width: 486px;
         height: 286px;
         background-image: url("../img/cube-desc.png");
@@ -421,10 +421,11 @@
 
     .page-footer__wrap {
         width: 1200px;
-        padding: 90px 0 50px 0;
+        padding: 66px 0 0 0;
     }
 
     .page-footer__title {
+        margin: 0 150px 0 0;
         padding: 0 0 160px 0;
         font-size: 48px;
         line-height: 64px;
@@ -446,6 +447,7 @@
 
     .page-footer__marque {
         width: 664px;
+        margin: 0 0 32px 0;
     }
 
     .page-footer__marque span {
@@ -458,7 +460,7 @@
     }
 
     .page-footer__copyright {
-        padding: 0 200px 0 0;
+        padding: 0 320px 0 0;
     }
 
     .page-footer__privacy {

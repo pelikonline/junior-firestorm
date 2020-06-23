@@ -141,9 +141,74 @@
     background-color: #3253FF;
 }
 
+.modal__form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: transparent;
+}
+
+.modal__form fieldset {
+    margin: 0;
+    padding: 0 0 56px 0;
+    border: none;
+}
+
+.modal__form input {
+    width: 256px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: transparent;
+    border-bottom: 1px solid #BDBDBD;
+}
+
+.modal__form-button {
+    width: 272px;
+    height: 40px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+
+    background-color: transparent;
+    border: 2px solid #202020;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.modal__telegram {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.modal__whatsapp {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.modal__skype {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.modal__email {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
 @media (min-width: 768px) {
     .modal__wrap {
-        width: 768px;
+        width: 400px;
         margin: 0 auto;
         padding: 68px 0 120px 0;
     }
@@ -151,7 +216,7 @@
 
 @media (min-width: 1024px) {
     .modal__wrap {
-        width: 860px;
+        width: 400px;
         margin: 0 auto;
         padding: 68px 0 120px 0;
     }
@@ -159,9 +224,9 @@
 
 @media (min-width: 1280px) {
     .modal__wrap {
-        width: 860px;
+        width: 600px;
         margin: 0 auto;
-        padding: 68px 0 120px 0;
+        padding: 0 0 100px 0;
     }
 
     .modal__title {

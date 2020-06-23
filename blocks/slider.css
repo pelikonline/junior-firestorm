@@ -1,10 +1,7 @@
 .slider {
     position: relative;
     margin: 0;
-    padding-top: 76px;
-    padding-bottom: 76px;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding: 28px 32px 76px 32px;
 }
 
 .slider-inner {
@@ -64,16 +61,14 @@
 
 @media (min-width: 768px) {
     .slider {
-        padding-top: 0;
-        padding-left: 40px;
+        padding: 0 0 0 74px;
     }
 
     .slider-controls {
-        padding-left: 8px;
         top: auto;
         left: auto;
         right: auto;
-        bottom: 0;
+        bottom: 16px;
     }
 
     .slick-dots li {
@@ -85,6 +80,20 @@
 
     .slider-arrows {
         display: block!important;
+        width: 52px;
+        height: 54px;
+        cursor: pointer;
+        margin-bottom: 0;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .slider-arrows__left {
+        right: 120px;
+    }
+
+    .slider-arrows__right {
+        right: 40px;
     }
 }
 

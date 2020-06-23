@@ -8,7 +8,7 @@
 .guarantee__wrap {
     width: 320px;
     margin: 0 auto;
-    padding: 70px 0 90px 0;
+    padding: 40px 0 0 0;
 }
 
 .guarantee__wrap-top {
@@ -21,7 +21,8 @@
 
 .guarantee__title {
     margin: 0;
-    padding: 0 0 35px 16px;
+    padding: 0 0 28px 0;
+    text-align: center;
     font-style: italic;
     font-weight: 900;
     font-size: 28px;
@@ -32,10 +33,10 @@
 
 .guarantee__item {
     position: relative;
-    padding: 40px 0 0 0;
+    padding: 110px 0 0 0;
     background-color: transparent;
     text-align: center;
-    min-height: 205px;
+    min-height: 150px;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -61,29 +62,30 @@
 }
 
 .guarantee__item-title {
-    margin-bottom: 20px;
+    margin: 0 0 14px 0;
     font-weight: 900;
-    font-size: 20px;
-    line-height: 40px;
+    font-size: 16px;
+    line-height: 24px;
     text-transform: uppercase;
     color: #ffffff;
 }
 
 .guarantee__item-description {
     font-weight: bold;
-    font-size: 14px;
-    line-height: 24px;
-    white-space: pre-line;
+    font-size: 12px;
+    line-height: 20px;
     color: #ffffff;
 }
 
 @media (min-width: 768px) {
     .guarantee__wrap {
         width: 768px;
+        padding: 40px 0 30px 0;
     }
 
     .guarantee__title {
-        padding: 0 0 50px 48px;
+        padding: 0 0 0 48px;
+        text-align: left;
         font-size: 40px;
         line-height: 48px;
     }
@@ -91,15 +93,20 @@
     .guarantee__item {
         text-align: inherit;
         margin: 0 80px 0 0;
-        background-position: right;
+        padding: 92px 0 78px 0;
+        background-position: 290px 35px;
     }
 
     .guarantee__item-title {
-        width: 240px;
+        width: 360px;
+        font-size: 20px;
+        line-height: 40px;
     }
 
     .guarantee__item-description {
-        width: 240px;
+        width: 360px;
+        font-size: 16px;
+        line-height: 28px;
         white-space: normal;
     }
 }
@@ -107,10 +114,17 @@
 @media (min-width: 1024px) {
     .guarantee__wrap {
         width: 860px;
+        padding: 108px 0 30px 0;
     }
 
     .guarantee__title {
         padding: 0 0 50px 0;
+    }
+
+    .guarantee__item {
+        margin: 0 80px 0 0;
+        padding: 42px 0 78px 20px;
+        background-position: 290px 0;
     }
 
     .guarantee__item-description {
@@ -123,6 +137,7 @@
 @media (min-width: 1280px) {
     .guarantee__wrap {
         width: 1200px;
+        padding: 130px 0 30px 0;
     }
 
     .guarantee__title {
@@ -134,18 +149,44 @@
 
     .guarantee__item {
         margin: 0 140px 0 0;
+        padding: 70px 0 100px 145px;
     }
 
     .guarantee__item-title {
-        width: 350px;
+        width: 650px;
         margin-bottom: 30px;
         font-size: 36px;
         line-height: 40px;
     }
 
     .guarantee__item-description {
-        width: 350px;
+        width: 400px;
         font-size: 18px;
         line-height: 32px;
+    }
+
+    .guarantee__item--idea {
+        background-image: url("../img/idea.svg");
+        background-position: 750px 0;
+    }
+
+    .guarantee__item--protect {
+        background-image: url("../img/protect.svg");
+        background-position: 750px 30px;
+    }
+
+    .guarantee__item--support {
+        background-image: url("../img/support.svg");
+        background-position: 750px 30px;
+    }
+
+    .guarantee__item--money {
+        background-image: url("../img/money.svg");
+        background-position: 750px 60px;
+    }
+
+    .guarantee__item--friends {
+        background-image: url("../img/friends.svg");
+        background-position: 750px 20px;
     }
 }

@@ -11,19 +11,20 @@
 }
 
 .slick-dots {
-    padding-left: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .slick-dots li {
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    width: 16px;
-    height: 16px;
-    margin-right: 16px;
+    width: 6px;
+    height: 6px;
+    margin-right: 6px;
     background-color: #cccccc;
     border: 0;
-    border-radius: 4px;
+    border-radius: 2px;
     cursor: pointer;
 }
 
@@ -37,10 +38,7 @@
 
 @media (min-width: 768px) {
     .slider-program {
-        padding-top: 0;
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-bottom: 55px;
+        padding: 0 40px 55px 48px;
     }
 
     .slider-program__controls {
@@ -48,10 +46,10 @@
     }
 
     .slick-dots li {
-        width: 48px;
-        height: 10px;
-        margin-right: 24px;
-        border-radius: 4px;
+        width: 36px;
+        height: 8px;
+        margin-right: 8px;
+        border-radius: 2px;
     }
 
     .slider-program__inner {
@@ -61,9 +59,7 @@
 
 @media (min-width: 1024px) {
     .slider-program {
-        padding-left: 0;
-        padding-right: 0;
-        padding-bottom: 80px;
+        padding: 0 0 80px 24px;
     }
 
     .slider-program__controls {
@@ -76,8 +72,11 @@
 }
 
 @media (min-width: 1280px) {
+    .slider-program {
+        padding: 0 0 116px 24px;
+    }
+
     .slider-program__controls {
         padding: 0 0 90px 0;
     }
-
 }

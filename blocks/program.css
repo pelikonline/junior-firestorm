@@ -33,7 +33,7 @@
 .program__item {
     position: relative;
     margin: 0;
-    padding: 40px 0 40px 0;
+    padding: 0 0 40px 0;
     background-color: transparent;
 }
 
@@ -84,8 +84,8 @@
     margin: 0;
     padding: 0 0 10px 0;
     font-weight: 900;
-    font-size: 20px;
-    line-height: 40px;
+    font-size: 16px;
+    line-height: 24px;
     text-transform: uppercase;
     color: #101010;
 }
@@ -115,7 +115,7 @@
 @media (min-width: 768px) {
     .program__wrap {
         width: 768px;
-        padding: 70px 0 70px 0;
+        padding: 56px 0 102px 0;
     }
 
     .program__wrap-top {
@@ -130,8 +130,9 @@
     }
 
     .program__item {
+        min-height: 210px;
         margin: 0 80px 0 0;
-        padding: 60px 0 20px 0;
+        padding: 0 0 60px 0;
     }
 
     .program__item--base::before {
@@ -142,28 +143,36 @@
         height: 40px;
         background-image: url("../img/01.svg");
         background-repeat: no-repeat;
-        top: 0;
+        top: 210px;
         left: 0;
         z-index: 10;
     }
 
     .program__item--exam::before {
         display: block;
-        top: 0;
+        top: 210px;
         left: 0;
     }
 
     .program__item--contract::before {
         display: block;
-        top: 0;
+        top: 210px;
         left: 0;
     }
 
+    .program__item-title {
+        padding: 0 0 30px 0;
+        font-size: 28px;
+        line-height: 40px;
+    }
+
     .program__item-description {
+        font-size: 16px;
         white-space: normal;
     }
 
     .program__item-text {
+        font-size: 16px;
         white-space: normal;
     }
 }
@@ -171,15 +180,28 @@
 @media (min-width: 1024px) {
     .program__wrap {
         width: 860px;
+        padding: 54px 0 102px 0;
     }
 
     .program__title {
-        padding: 0 0 50px 0;
+        padding: 0 0 32px 0;
     }
 
     .program__item {
         margin: 0 80px 0 0;
-        padding: 60px 0 0 0;
+        padding: 0;
+    }
+
+    .program__item--base::before {
+        top: 180px;
+    }
+
+    .program__item--exam::before {
+        top: 180px;
+    }
+
+    .program__item--contract::before {
+        top: 180px;
     }
 
     .program__item-title {
@@ -198,38 +220,37 @@
     }
 }
 
-
-
 @media (min-width: 1280px) {
     .program__wrap {
         width: 1200px;
-        padding: 100px 0 100px 0;
+        padding: 130px 0 205px 0;
     }
 
     .program__title {
         width: 750px;
-        padding: 0 0 80px 0;
+        padding: 0 0 66px 0;
         font-size: 48px;
         line-height: 90px;
     }
 
     .program__item {
+        min-height: 270px;
         margin: 0 90px 0 0;
-        padding: 0 0 0 110px;
+        padding: 40px 0 0 110px;
     }
 
     .program__item--base::before {
-        top: 8px;
+        top: 48px;
         right: 440px;
     }
 
     .program__item--exam::before {
-        top: 8px;
+        top: 48px;
         right: 440px;
     }
 
     .program__item--contract::before {
-        top: 8px;
+        top: 48px;
         right: 440px;
     }
 

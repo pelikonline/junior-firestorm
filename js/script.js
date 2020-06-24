@@ -2,6 +2,8 @@ $(document).ready(function () {
   toggleModal({
     modalElement: ".js-modal",
     buttonElement: ".js-toggle-modal",
+    blackoutClass: "blackout",
+    body: "body",
   });
 
   configureGalleryGuarantee({
@@ -35,13 +37,163 @@ $(document).ready(function () {
     targetElement: ".js-button-arrow",
     duration: 500,
   });
+
+  var requiredMessage = "Это поле обязательно для заполнения";
+  var emailMessage = "Введите корректный адрес эл.почты";
+
+  function handleSuccess(responseText, statusText, xhr, $form) {
+    $form.append("<p class='success'>Данные успешно отправлены</p>");
+    setTimeout(function () {
+      $(".success").remove();
+    }, 3000);
+  }
+
+  function submitHandler(form) {
+    $(form).ajaxSubmit({
+      success: handleSuccess,
+      clearForm: true,
+    });
+  }
+
+  $(".js-whatsapp-form").validate({
+    rules: {
+      whatsappPhone: {
+        required: true,
+      },
+      lastName: {
+        required: true,
+      },
+      firstName: {
+        required: true,
+      },
+    },
+    messages: {
+      whatsappPhone: {
+        required: requiredMessage,
+      },
+      lastName: {
+        required: requiredMessage,
+      },
+      firstName: {
+        required: requiredMessage,
+      },
+    },
+    submitHandler: submitHandler,
+  });
+
+  $(".js-skype-form").validate({
+    rules: {
+      skypeUsername: {
+        required: true,
+      },
+      lastName: {
+        required: true,
+      },
+      firstName: {
+        required: true,
+      },
+    },
+    messages: {
+      skypeUsername: {
+        required: requiredMessage,
+      },
+      lastName: {
+        required: requiredMessage,
+      },
+      firstName: {
+        required: requiredMessage,
+      },
+    },
+    submitHandler: submitHandler,
+  });
+
+  $(".js-email-form").validate({
+    rules: {
+      email: {
+        required: true,
+        email: true,
+      },
+      lastName: {
+        required: true,
+      },
+      firstName: {
+        required: true,
+      },
+    },
+    messages: {
+      email: {
+        required: requiredMessage,
+        email: emailMessage,
+      },
+      lastName: {
+        required: requiredMessage,
+      },
+      firstName: {
+        required: requiredMessage,
+      },
+    },
+    submitHandler: submitHandler,
+  });
 });
 
 function toggleModal(config) {
-  $(config.buttonElement).click(function (e) {
+  var $modalElement = $(config.modalElement);
+  var $buttonElement = $(config.buttonElement);
+  var $body = $(config.body);
+
+  function complete() {
+    var config = {
+      container: ".js-modal-options",
+      prevArrow: ".js-modal-options-prev",
+      nextArrow: ".js-modal-options-next",
+    };
+
+    if ($body.css("overflow") === "hidden") {
+      $body.css("overflow", "");
+
+      $(config.container).slick("unslick");
+    } else {
+      $body.css("overflow", "hidden");
+      configureModalOptions(config);
+    }
+  }
+
+  // Закрытие\открытие по кнопке и закрытие по крестику
+  $buttonElement.on("click", function (e) {
     e.preventDefault();
 
-    $(config.modalElement).fadeToggle();
+    $modalElement.fadeToggle({
+      complete: complete,
+    });
+  });
+
+  // Закрытие по темному фону попапа
+  $modalElement.on("click", function (e) {
+    if (
+      typeof e.target.className === "string" &&
+      e.target.className.indexOf(config.blackoutClass) > -1
+    ) {
+      e.preventDefault();
+
+      $modalElement.fadeToggle({
+        complete: complete,
+      });
+    }
+  });
+}
+
+function configureModalOptions(config) {
+  $(config.container).slick({
+    dots: false,
+    autoplay: false,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    draggable: false,
+    swipe: false,
+    touchMove: false,
+    prevArrow: $(config.prevArrow),
+    nextArrow: $(config.nextArrow),
   });
 }
 

@@ -57,6 +57,10 @@
     display: none;
 }
 
+.modal__item-first {
+    display: block;
+}
+
 .modal__item {
     outline: none;
 }

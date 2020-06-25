@@ -1,14 +1,23 @@
-.modal {
-    display: none;
+.blackout {
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
     position: fixed;
-    z-index: 500;
     top: 0;
     left: 0;
-    width: 100%;
+    z-index: 500;
+    display: none;
+}
+
+.modal {
+    box-sizing: border-box;
+    overflow: auto;
+    z-index: 500;
     font-family: "Montserrat", Arial, sans-serif;
     background-color: #000000;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 25px 32px;
+    width: 100%;
+    height: 100%;
 }
 
 .modal__close {
@@ -16,20 +25,21 @@
     width: 18px;
     height: 18px;
     margin-left: auto;
-    margin-right: 16px;
     cursor: pointer;
 }
 
 .modal__wrap {
-    width: 320px;
-    margin: 0 auto;
+    box-sizing: border-box;
+    /*width: 320px;*/
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 28px;
+    padding-bottom: 28px;
 }
 
 .modal__title {
-    width: 140px;
-    margin: 0 0 52px 32px;
-    padding: 0;
+    margin-top: 0;
+    margin-bottom: 24px;
     font-style: italic;
     font-weight: 900;
     font-size: 16px;
@@ -38,91 +48,110 @@
     color: #FFFFFF;
 }
 
-.modal__list {
-    margin: 0;
-    padding: 0;
-}
+.modal__list {}
 
 .modal__item {
     margin: 0;
     padding: 0;
+    text-align: center;
+    display: none;
+}
+
+.modal__item-first {
+    display: block;
+}
+
+.modal__item {
+    outline: none;
+}
+
+.modal__inner-wrapper {
+    position: relative;
+}
+
+.modal-arrows {
+    display: block;
+    width: 35px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.modal-arrows__left {
+    left: 0;
+    top: 5%;
+}
+
+.modal-arrows__right {
+    right: 0;
+    top: 5%;
 }
 
 .modal__item-title {
-    position: relative;
-    margin: 0 0 40px 32px;
-    padding: 0;
+    margin-top: 0;
+    padding-bottom: 7px;
     font-weight: 900;
     font-size: 20px;
     line-height: 24px;
     text-transform: uppercase;
     color: #FF3232;
-}
-
-.modal__item-title::before {
-    position: absolute;
-    content: "";
-    width: 123px;
-    height: 4px;
-    left: 0;
-    top: 32px;
-    background-color: #FF3232;
-}
-
-.modal__telegram {
-    position: relative;
-}
-
-.modal__telegram::after {
-    position: absolute;
-    content: "мгновенно";
-    top: -24px;
-    left: 0;
-    z-index: 40;
-    font-style: italic;
-    font-weight: 800;
-    font-size: 12px;
-    line-height: 24px;
-    color: #828282;
+    text-align: center;
+    border-bottom: 4px solid #FF3232;
+    display: inline-block;
 }
 
 .modal__telegram-image {
-    display: none;
+    display: none!important;
+    width: 184px;
+    height: 184px;
+    margin-right: 32px;
 }
 
 .modal__telegram-text {
     display: none;
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #BDBDBD;
+    text-align: left;
+}
+
+.modal__telegram-text span {
+    font-weight: bold;
 }
 
 .modal__item-description {
-    margin: 0 0 60px 32px;
-    padding: 0;
+    margin-top: 0;
+    margin-bottom: 28px;
     font-weight: 800;
     font-size: 12px;
-    line-height: 24px;
-    white-space: pre-wrap;
     color: #FFFFFF;
+    text-align: left;
+    line-height: 2;
 }
 
 .modal__item-description span {
+    margin-top: 12px;
+    display: block;
     font-weight: 400;
 }
 
 .modal__item-button {
-    display: block;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
     position: relative;
-    width: 240px;
-    margin: 0 0 0 32px;
-    padding: 0 0 0 32px;
     font-style: italic;
     font-size: 12px;
     font-weight: 600;
-    line-height: 40px;
     color: #ffffff;
     background-color: #329DFF;
     box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.2);
     border-radius: 40px;
-    cursor: pointer;
+    transition: background-color .25s;
 }
 
 .modal__item-button::before {
@@ -142,96 +171,118 @@
 }
 
 .modal__form {
-    width: 300px;
     margin: 0 auto;
-    padding: 20px;
     background-color: transparent;
-}
-
-.modal__form fieldset {
-    margin: 0;
-    padding: 0 0 56px 0;
-    border: none;
+    display: flex;
+    flex-direction: column;
 }
 
 .modal__form input {
-    width: 256px;
-    margin: 0;
-    padding: 0;
+    padding: 0 0 5px;
     font-weight: 600;
     font-size: 12px;
-    line-height: 24px;
+    line-height: 2;
     text-align: center;
     color: #FFFFFF;
     background-color: transparent;
+    border: none;
     border-bottom: 1px solid #BDBDBD;
+    margin-bottom: 10px;
+}
+
+.modal__form input {
+    outline: none;
+}
+
+.modal__form input::-webkit-input-placeholder {
+    color: #828282;
+    font-weight: normal;
+}
+.modal__form input:-ms-input-placeholder {
+    color: #828282;
+    font-weight: normal;
+}
+.modal__form input::-moz-placeholder {
+    color: #828282;
+    font-weight: normal;
+}
+.modal__form input:-moz-placeholder {
+    color: #828282;
+    font-weight: normal;
 }
 
 .modal__form-button {
-    width: 272px;
-    height: 40px;
     font-weight: 600;
     font-size: 12px;
-    line-height: 40px;
-    text-align: center;
+    line-height: 36px;
+    padding: 0;
     color: #FFFFFF;
-
+    font-style: italic;
     background-color: transparent;
-    border: 2px solid #202020;
-    box-sizing: border-box;
+    border: 2px solid #fff;
     border-radius: 20px;
+    transition: background-color, color .25s;
+    cursor: pointer;
+    margin-top: 32px;
 }
 
-.modal__telegram {
-    display: none;
-    margin: 0;
-    padding: 0;
+.modal__form-button:hover {
+    background-color: #fff;
+    color: #000;
 }
 
-.modal__whatsapp {
-    display: none;
-    margin: 0;
-    padding: 0;
+.modal__form-button:focus {
+    outline: none;
 }
 
-.modal__skype {
-    display: none;
-    margin: 0;
-    padding: 0;
+.modal__form-button--disabled {
+    pointer-events:none;
+    opacity: 0.2;
 }
 
-.modal__email {
-    display: block;
+.modal__item-subtitle {
     margin: 0;
-    padding: 0;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 24px;
+    color: #828282;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.success {
+    color: green;
 }
 
 @media (min-width: 768px) {
-    .modal__wrap {
-        width: 400px;
-        margin: 0 auto;
-        padding: 68px 0 120px 0;
+    .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        height: auto;
     }
-}
-
-@media (min-width: 1024px) {
     .modal__wrap {
         width: 400px;
-        margin: 0 auto;
-        padding: 68px 0 120px 0;
+    }
+    .modal__form {
+        width: 300px;
     }
 }
 
 @media (min-width: 1280px) {
     .modal__wrap {
         width: 600px;
-        margin: 0 auto;
-        padding: 0 0 100px 0;
     }
 
     .modal__title {
-        width: 320px;
-        margin: 60px 0 80px 0;
+        margin: 42px 0 80px 0;
         font-size: 20px;
         line-height: 40px;
     }
@@ -241,18 +292,6 @@
         font-style: italic;
         font-size: 36px;
         line-height: 40px;
-        text-transform: uppercase;
-        color: #ffffff;
-    }
-
-    .modal__item-title::before {
-        position: absolute;
-        content: "";
-        width: 600px;
-        height: 2px;
-        left: 0;
-        top: 50px;
-        background-color: #ffffff;
     }
 
     .modal__telegram::after {
@@ -265,42 +304,41 @@
     }
 
     .modal__item-description {
-        width: 565px;
-        margin: 0 0 32px 0;
-        padding: 0 0 0 32px;
+        margin-bottom: 32px;
         font-size: 16px;
-        line-height: 32px;
-        white-space: normal;
     }
 
     .modal__telegram-qr {
         display: flex;
-        flex-wrap: wrap;
-        width: 600px;
-        margin: 0;
-        padding: 0;
+    }
+
+    .modal__telegram-right {
+        display: flex;
+        flex-direction: column;
     }
 
     .modal__telegram-image {
-        display: block;
-        margin: 0 32px 0 32px;
+        display: block!important;
     }
 
     .modal__telegram-text {
         display: block;
-        margin: 0;
-        padding: 0 0 0 32px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 28px;
-        white-space: pre-wrap;
-        color: #BDBDBD;
     }
 
     .modal__item-button {
-        width: 368px;
-        margin: -40px 0 0 244px;
         font-size: 16px;
         line-height: 40px;
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .modal {
+        width: 900px;
+    }
+
+    .modal-arrows {
+        width: 52px;
+        height: 54px;
     }
 }

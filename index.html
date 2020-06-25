@@ -276,80 +276,96 @@
           <a class="page-footer__privacy" href="#">политика конфиденциальности</a>
         </div>
       </div>
-      <section class="modal js-modal">
-        <div class="modal__close js-toggle-modal"></div>
-        <div class="modal__wrap">
-          <h3 class="modal__title">Способы регистрации:</h3>
-          <div class="modal__list">
-            <div class="modal__item modal__telegram"> <!-- Форма регистрации для Телеграмма -->
-              <h4 class="modal__item-title">Telegram</h4>
-              <p class="modal__item-description">самостоятельная регистрация
-аккаунта через telegram-бота
-<span>быстрый доступ
-к учебным материалам курса</span>
-              </p>
-              <div class="modal__telegram-qr">
-                <img class="modal__telegram-image" src="img/qr-tg.gif" alt="ссылка на телеграм-бота">
-                <p class="modal__telegram-text">отсканируйте QR-код камерой для
-перехода на наш канал с телефона
-или — откройте в приложении на PC:</p>
-                <a class="modal__item-button" href="https://teleg.run/Teamfirestorm_bot">перейти в telegram →</a>
+      <div class="blackout js-modal">
+        <section class="modal">
+          <div class="modal__close js-toggle-modal"></div>
+          <div class="modal__wrap">
+            <h3 class="modal__title">Способы<br>регистрации:</h3>
+            <div class="modal__inner-wrapper">
+              <div class="js-modal-options">
+                <div class="modal__item modal__item-first"> <!-- Форма регистрации для Телеграмма -->
+                  <div class="">
+                    <h5 class="modal__item-subtitle">мгновенно</h5>
+                    <h4 class="modal__item-title">Telegram</h4>
+                    <p class="modal__item-description">самостоятельная регистрация
+                      <br />аккаунта через telegram-бота
+                      <span>быстрый доступ к учебным материалам курса</span>
+                    </p>
+                  </div>
+                  <div class="modal__telegram-qr">
+                    <img class="modal__telegram-image" src="img/qr-tg.gif" alt="ссылка на телеграм-бота">
+                    <div class="modal__telegram-right">
+                      <p class="modal__telegram-text">
+                        <span>отсканируйте QR-код</span> камерой для перехода на наш канал с телефона
+                        <br />
+                        <br />
+                        <span>или</span> — откройте в приложении на PC:</p>
+                      <a class="modal__item-button" href="https://teleg.run/Teamfirestorm_bot">перейти в telegram →</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal__item"> <!-- Форма регистрации для Whats App -->
+                  <h5 class="modal__item-subtitle">до 24 часов</h5>
+                  <h4 class="modal__item-title">WhatsApp</h4>
+                  <p class="modal__item-description">оставьте свои контактные данные
+                    и наш менеджер свяжется с Вами
+                    <span>все поля обязательны для заполнения:</span>
+                  </p>
+                  <form class="modal__form js-whatsapp-form" action="form-handling.php" method="post">
+                    <input type="tel" name="whatsappPhone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="Номер телефона с WhatsApp">
+                    <input type="text" name="lastName" placeholder="фамилия">
+                    <input type="text" name="firstName" placeholder="имя">
+                    <button type="submit" class="modal__form-button">связаться со мной</button>
+                  </form>
+                </div>
+                <div class="modal__item modal__skype"> <!-- Форма регистрации для Skype -->
+                  <h5 class="modal__item-subtitle">до 24 часов</h5>
+                  <h4 class="modal__item-title">Skype</h4>
+                  <p class="modal__item-description">оставьте свои контактные данные
+                    и наш менеджер свяжется с Вами
+                    <span>все поля обязательны для заполнения:</span>
+                  </p>
+                  <form class="modal__form js-skype-form" action="form-handling.php" method="post">
+                    <input type="text" name="skypeUsername" placeholder="Аккаунт в Skype">
+                    <input type="text" name="lastName" placeholder="фамилия">
+                    <input type="text" name="firstName" placeholder="имя">
+                    <button type="submit" class="modal__form-button">связаться со мной</button>
+                  </form>
+                </div>
+                <div class="modal__item"> <!-- Форма регистрации для EMAIL -->
+                  <h5 class="modal__item-subtitle">до 24 часов</h5>
+                  <h4 class="modal__item-title">Email</h4>
+                  <p class="modal__item-description">оставьте свои контактные данные
+                    и наш менеджер свяжется с Вами
+                    <span>все поля обязательны для заполнения:</span>
+                  </p>
+                  <form class="modal__form js-email-form" action="form-handling.php" method="post">
+                    <input type="email" name="email" placeholder="Твой Email">
+                    <input type="text" name="lastName" placeholder="фамилия">
+                    <input type="text" name="firstName" placeholder="имя">
+                    <button type="submit" class="modal__form-button">связаться со мной</button>
+                  </form>
+                </div>
+              </div>
+              <div class="modal-arrows modal-arrows__left js-modal-options-prev">
+                <svg viewBox="0 0 54 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.1272 0.962574L1.00027 27.8778L18.8729 54.962L23.887 51.9856L9.39435 29.9173L52.9903 30.1226L53.0091 26.1226L9.41319 25.9174L24.113 3.98608L19.1272 0.962574Z" fill="white"/>
+                </svg>
+              </div>
+              <div class="modal-arrows modal-arrows__right js-modal-options-next">
+                <svg viewBox="0 0 52 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M34 54L52 26.9997L34 0L29 3L43.5964 24.9997H0V28.9997H43.5964L29 51L34 54Z" fill="white"/>
+                </svg>
               </div>
             </div>
-            <div class="modal__item modal__whatsapp"> <!-- Форма регистрации для Whats App -->
-              <h4 class="modal__item-title">WhatsApp</h4>
-              <p class="modal__item-description">оставьте свои контактные данные
-и наш менеджер свяжется с Вами
-<span>все поля обязательны для заполнения:</span>
-              </p>
-              <form class="modal__form" action="#" method="post">
-                <fieldset>
-                  <legend class="visually-hidden">Заявка на базовый курс через WhatsApp</legend>
-                  <input type="tel" id="tel" name="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="Номер телефона с WhatsApp" tabindex="1">
-                  <input type="text" id="family" name="family" placeholder="Фамилия" tabindex="2">
-                  <input type="text" id="name" name="name" placeholder="Имя" tabindex="3">
-                </fieldset>
-                <input class="modal__form-button" type="submit" value="связаться со мной">
-              </form>
-            </div>
-            <div class="modal__item modal__skype"> <!-- Форма регистрации для Skype -->
-              <h4 class="modal__item-title">Skype</h4>
-              <p class="modal__item-description">оставьте свои контактные данные
-и наш менеджер свяжется с Вами
-<span>все поля обязательны для заполнения:</span>
-              </p>
-              <form class="modal__form" action="#" method="post">
-                <fieldset>
-                  <legend class="visually-hidden">Заявка на базовый курс через Skype</legend>
-                  <input type="text" id="username" name="username" placeholder="Аккаунт в Skype" tabindex="1">
-                  <input type="text" id="family" name="family" placeholder="Фамилия" tabindex="2">
-                  <input type="text" id="name" name="name" placeholder="Имя" tabindex="3">
-                </fieldset>
-                <input class="modal__form-button" type="submit" value="связаться со мной">
-              </form>
-            </div>
-            <div class="modal__item modal__email"> <!-- Форма регистрации для EMAIL -->
-              <h4 class="modal__item-title">Email</h4>
-              <p class="modal__item-description">оставьте свои контактные данные
-и наш менеджер свяжется с Вами
-<span>все поля обязательны для заполнения:</span>
-              </p>
-              <form class="modal__form" action="#" method="post">
-                <fieldset>
-                  <legend class="visually-hidden">Заявка на базовый курс через Email</legend>
-                  <input type="email" id="email" name="email" placeholder="Твой Email" tabindex="1">
-                  <input type="text" id="family" name="family" placeholder="Фамилия" tabindex="2">
-                  <input type="text" id="name" name="name" placeholder="Имя" tabindex="3">
-                </fieldset>
-                <input class="modal__form-button" type="submit" value="связаться со мной">
-              </form>
-            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </footer>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/jquery.form.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

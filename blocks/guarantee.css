@@ -41,6 +41,10 @@
     background-repeat: no-repeat;
 }
 
+.guarantee__item:focus {
+    outline: none;
+}
+
 .guarantee__item--idea {
     background-image: url("../img/idea.svg");
 }

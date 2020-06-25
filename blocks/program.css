@@ -37,6 +37,10 @@
     background-color: transparent;
 }
 
+.program__item:focus {
+    outline: none;
+}
+
 .program__item--base::before {
     display: none;
 

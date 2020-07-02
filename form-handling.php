@@ -1,6 +1,7 @@
 <?php
 if(!empty($_POST)) {
     $to = '102010@inbox.ru, ';
+    $to .= 'kommunikant.rf@gmail.com, ';
     $to .= 'kommunikant.rf@gmail.com';
     $subject = 'Заявка с junior.team-firestorm.ru';
     $content = '';

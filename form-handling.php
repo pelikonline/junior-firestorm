@@ -19,7 +19,7 @@ if(!empty($_POST)) {
     ';
     $headers  = "Content-type: text/html; charset=utf-8 \r\n"; 
 
-    / AMO.CRM /
+    // AMO.CRM
     $_REQUEST = array_merge($_REQUEST, $_COOKIE);
     $url_delivery_amo = 'https://apicrm.ru/amo/domain/junior.team-firestorm.ru/amocrm_api.php';
     $curl = curl_init();
@@ -30,7 +30,7 @@ if(!empty($_POST)) {
     curl_setopt($curl,CURLOPT_HEADER,false);
     curl_exec($curl);
     curl_close($curl); #Заверашем сеанс cURL
-    / /AMO.CRM / utm_cookie.min.js
+    // AMO.CRM / utm_cookie.min.js
 
     mail($to, $subject, $messageString, $headers);
 }
